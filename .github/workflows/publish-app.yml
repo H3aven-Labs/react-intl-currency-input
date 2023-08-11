@@ -18,7 +18,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: [16.x, 18.x]
       - run: npm ci
       - run: npx turbo run lint
       - run: npx turbo run build:app
@@ -48,7 +48,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: [16.x, 18.x]
 
       - name: Download previously built app artifacts
         uses: actions/download-artifact@v3
