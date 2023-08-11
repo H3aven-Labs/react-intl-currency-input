@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { any, bool, func, instanceOf, node, number, oneOfType, shape, string } from 'prop-types';
+import { any, bool, func, node, number, shape, string } from 'prop-types';
 
 import formatCurrency from './format-currency';
 import { IntlCurrencyInputProps, IntlFormatterConfig } from './types';
@@ -166,8 +166,6 @@ const IntlCurrencyInput = ({
   );
 };
 
-const checkCurrentPropType = () => Element ? instanceOf(Element) : any;
-
 IntlCurrencyInput.propTypes = {
   defaultValue: number,
   value: number,
@@ -182,10 +180,7 @@ IntlCurrencyInput.propTypes = {
   onBlur: func.isRequired,
   onFocus: func.isRequired,
   onKeyPress: func.isRequired,
-  inputRef: oneOfType([
-    func,
-    shape({ current: checkCurrentPropType() })
-  ])
+  inputRef: any
 };
 
 IntlCurrencyInput.defaultProps = {
