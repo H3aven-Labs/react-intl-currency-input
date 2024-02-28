@@ -11,9 +11,9 @@ export type IntlFormatterConfig = {
 
 export type IntlCurrencyInputProps = React.PropsWithChildren & {
   component: React.ElementType;
-  defaultValue: number;
+  defaultValue?: number;
   value: number;
-  max: number;
+  max?: number;
   currency: string;
   config: IntlFormatterConfig;
   autoFocus: boolean;
