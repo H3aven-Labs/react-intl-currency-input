@@ -1,6 +1,6 @@
 {
   "name": "@h3aven-labs/react-intl-currency-input",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "description": "A React component for i18n currency input using the Intl API.",
   "type": "module",
   "main": "dist/lib/index.cjs",
