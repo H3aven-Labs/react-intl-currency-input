@@ -1,6 +1,6 @@
 {
   "name": "@h3aven-labs/react-intl-currency-input",
-  "version": "0.3.8",
+  "version": "0.3.9",
   "description": "A React component for i18n currency input using the Intl API.",
   "type": "module",
   "main": "dist/lib/index.cjs",
@@ -17,6 +17,7 @@
     "coverage": "vitest run --coverage"
   },
   "dependencies": {
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-syntax-highlighter": "^15.5.0",
@@ -38,7 +39,7 @@
     "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-react": "^7.32.2",
     "jsdom": "^21.1.1",
-    "typescript": "^5.0.3",
+    "typescript": "^5.8.3",
     "vite": "^4.2.1",
     "vitest": "^0.29.8"
   },
@@ -63,10 +64,6 @@
     "url": "https://github.com/thiagozanetti/react-intl-currency-input/issues"
   },
   "homepage": "https://github.com/thiagozanetti/react-intl-currency-input#readme",
-  "engines": {
-    "node": "^16 || ^18 || ^20 || ^22",
-    "npm": "^8 || ^9 || ^10 || ^11"
-  },
   "workspaces": [
     "app/*",
     "lib/*"

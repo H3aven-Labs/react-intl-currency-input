@@ -10,7 +10,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -20,7 +19,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: [16.x, 18.x]
+          node-version: 22.19.0
       - run: npm ci
       - run: npx turbo run lint
       - run: npx turbo run build:lib
@@ -32,12 +31,9 @@ jobs:
           path: dist/lib
 
   publish-npm:
-
     needs: build
 
     runs-on: ubuntu-latest
-
-    environment: Production
 
     steps:
       - name: Checkout repository
@@ -46,7 +42,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: [16.x, 18.x]
+          node-version: 22.19.0
           registry-url: https://registry.npmjs.org/
 
       - name: Download previously built lib artifacts
